@@ -18,13 +18,13 @@ def handle_404_error(e):
     response.status_code = 404
     return response
 
+
 @app.teardown_appcontext
 def close(exception=None):
     """
      Function closes the current session
     """
     storage.close()
-
 
 
 if __name__ == "__main__":
